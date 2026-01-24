@@ -1,0 +1,72 @@
+### USERS
+GET http://localhost:3000/users
+
+### Create
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "username": "cabreraSamas",
+    "password": "mi4v-aee3-5939"
+}
+
+###POSTS
+GET http://localhost:3000/posts
+
+### Find by ID
+GET http://localhost:3000/posts/afa314ee-c4fc-4f0a-a21d-558cbb475861
+
+### Find by Tag
+GET http://localhost:3000/posts/tag/tag4
+
+### Create
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title": "Post 50asddfghdf",
+    "imgs": [
+        "https://unsplash.com/es/fotos/teclado-negro-en-el-escritorio-9juYjd6iQLU",
+        "https://example.com/image2.jpg"
+    ],
+    "excerpt": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    "content": [
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+        "Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc"
+    ],
+    "tags": ["tag1", "tag2", "tag3", "tag4"]
+}
+
+### Update
+PUT http://localhost:3000/posts/f756a007-56fb-4e63-9137-0cec6782430c
+Content-Type: application/json
+
+{
+    "title": "Editado Post 50asddfghdf",
+    "imgs": [
+        "https://unsplash.com/es/fotos/teclado-negro-en-el-escritorio-9juYjd6iQLU",
+        "https://example.com/image2.jpg",
+        "https://example.com/image3.jpg"
+    ],
+    "excerpt": "123 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    "content": [
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+        "Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc"
+    ],
+    "tags": ["tag1", "tag2", "tag3", "tag4"]
+}
+
+### Delete
+DELETE http://localhost:3000/posts/f756a007-56fb-4e63-9137-0cec6782430c
+
+### Login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "cabreraSam",
+    "password": "mi4v-aee3-5939"
+}
+
+### Logout
+POST http://localhost:3000/login/logout
