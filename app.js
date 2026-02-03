@@ -20,6 +20,7 @@ app.use(cors({
     'http://localhost:5174',
     'https://reddefensor.com',
     'https://www.reddefensor.com',
+    'https://admin.reddefensor.com',
     'https://rds-front.vercel.app',
     'https://rds-admin-eosin.vercel.app'
   ],
