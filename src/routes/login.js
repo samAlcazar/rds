@@ -33,8 +33,9 @@ export const loginRouter = () => {
       res
         .cookie('access_token', token, {
           httpOnly: true,
-          secure: process.env.NODE_ENV === 'production',
-          sameSite: 'strict'
+          secure: true,
+          sameSite: 'none',
+          path: '/'
         })
         .json({ username: result.username, message: 'Logged in successfully' })
     } catch (error) {
@@ -43,7 +44,14 @@ export const loginRouter = () => {
   })
 
   router.post('/logout', (req, res) => {
-    res.clearCookie('access_token').status(200).send({ message: 'Logged out successfully' })
+    res.clearCookie('access_token', {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'none',
+      path: '/'
+    })
+      .status(200)
+      .send({ message: 'Logged out successfully' })
   })
 
   return router
